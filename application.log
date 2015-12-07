@@ -1,0 +1,55 @@
+*** Starting uWSGI 1.9.17.1-debian (64bit) on [Mon Nov 30 11:13:03 2015] ***
+compiled with version: 4.8.2 on 23 March 2014 17:15:32
+os: Linux-3.19.0-25-generic #26~14.04.1-Ubuntu SMP Fri Jul 24 21:16:20 UTC 2015
+nodename: pi
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/kwasiboa/flask-session
+writing pidfile to /home/kwasiboa/flask-session/session.pid
+detected binary path: /usr/bin/uwsgi-core
+your processes number limit is 100
+your memory page size is 4096 bytes
+detected max file descriptor number: 300
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /tmp/kwasiboa,session.sock fd 3
+Python version: 2.7.6 (default, Jun 22 2015, 18:01:27)  [GCC 4.8.2]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xd06790
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145584 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xd06790 pid: 23224 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 23224)
+spawned uWSGI worker 1 (pid: 23227, cores: 1)
+[pid: 23227|app: 0|req: 1/1] 194.29.146.16 () {46 vars in 815 bytes} [Mon Nov 30 11:13:17 2015] GET /kwasiboa/session => generated 291 bytes in 33 msecs (HTTP/1.0 301) 3 headers in 149 bytes (1 switches on core 0)
+[pid: 23227|app: 0|req: 2/2] 194.29.146.16 () {46 vars in 817 bytes} [Mon Nov 30 11:13:17 2015] GET /kwasiboa/session/ => generated 253 bytes in 1 msecs (HTTP/1.0 302) 3 headers in 142 bytes (1 switches on core 0)
+[pid: 23227|app: 0|req: 3/3] 194.29.146.16 () {46 vars in 827 bytes} [Mon Nov 30 11:13:17 2015] GET /kwasiboa/session/login => generated 327 bytes in 9 msecs (HTTP/1.0 200) 2 headers in 80 bytes (1 switches on core 0)
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1820, in wsgi_app
+    response = self.make_response(self.handle_exception(e))
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1403, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1478, in full_dispatch_request
+    response = self.make_response(rv)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1566, in make_response
+    raise ValueError('View function did not return a response')
+ValueError: View function did not return a response
+[pid: 23227|app: 0|req: 4/4] 194.29.146.16 () {44 vars in 792 bytes} [Mon Nov 30 11:13:24 2015] GET /kwasiboa/session/register => generated 5449 bytes in 8 msecs (HTTP/1.0 500) 2 headers in 99 bytes (1 switches on core 0)
+[pid: 23227|app: 0|req: 5/5] 194.29.146.16 () {44 vars in 850 bytes} [Mon Nov 30 11:13:25 2015] GET /kwasiboa/session/register?__debugger__=yes&cmd=resource&f=style.css => generated 6012 bytes in 4 msecs (HTTP/1.0 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 23227|app: 0|req: 6/6] 194.29.146.16 () {44 vars in 839 bytes} [Mon Nov 30 11:13:25 2015] GET /kwasiboa/session/register?__debugger__=yes&cmd=resource&f=debugger.js => generated 6345 bytes in 0 msecs (HTTP/1.0 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 23227|app: 0|req: 7/7] 194.29.146.16 () {44 vars in 835 bytes} [Mon Nov 30 11:13:25 2015] GET /kwasiboa/session/register?__debugger__=yes&cmd=resource&f=jquery.js => generated 78601 bytes in 0 msecs (HTTP/1.0 200) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 23227|app: 0|req: 8/8] 194.29.146.16 () {44 vars in 864 bytes} [Mon Nov 30 11:13:25 2015] GET /kwasiboa/session/register?__debugger__=yes&cmd=resource&f=console.png => generated 507 bytes in 0 msecs (HTTP/1.0 200) 2 headers in 65 bytes (1 switches on core 0)
+[pid: 23227|app: 0|req: 9/9] 194.29.146.16 () {44 vars in 862 bytes} [Mon Nov 30 11:13:25 2015] GET /kwasiboa/session/register?__debugger__=yes&cmd=resource&f=source.png => generated 818 bytes in 0 msecs (HTTP/1.0 200) 2 headers in 65 bytes (1 switches on core 0)
+[pid: 23227|app: 0|req: 10/10] 194.29.146.16 () {44 vars in 839 bytes} [Mon Nov 30 11:13:25 2015] GET /kwasiboa/session/register?__debugger__=yes&cmd=resource&f=console.png => generated 507 bytes in 0 msecs (HTTP/1.0 200) 2 headers in 65 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /tmp/kwasiboa,session.sock removed.
